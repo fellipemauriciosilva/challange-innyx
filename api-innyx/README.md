@@ -1,3 +1,5 @@
+# Projeto Challange INNYX
+
 ## Configurando o Ambiente de Desenvolvimento com Docker
 
 Para iniciar o projeto localmente, siga estas etapas:
@@ -31,7 +33,3 @@ Para iniciar o projeto localmente, siga estas etapas:
     docker-compose exec app php artisan migrate
 
 6. Acesse o aplicativo em http://localhost:8080 (ou na porta configurada no docker-compose.yml).
-
-   
-
-

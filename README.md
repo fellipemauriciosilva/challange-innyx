@@ -1,39 +1,39 @@
-# challange-innyx
-challange-innyx
+# Projeto Challange INNYX
 
-## Configurando o Ambiente de Desenvolvimento com Docker
+## Descrição
 
-Para iniciar o projeto localmente, siga estas etapas:
+Este projeto é uma aplicação web construída com base no framework Laravel, que oferece uma plataforma de gerenciamento de produtos. Com ele, você pode criar, visualizar, editar e excluir produtos e categorias relacionadas, mantendo um controle organizado de seus itens.
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/fellipemauriciosilva/challange-innyx.git
+## Recursos Principais
 
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd api-innyx
+- **Cadastro de Produtos:** Crie novos produtos fornecendo informações como nome, descrição, preço, data de validade, imagem e categoria associada.
 
-3. Abra o arquivo .env e configure as variáveis de ambiente do banco de dados:
-   ```bash
-    DB_CONNECTION=mysql
-    DB_HOST=mysql
-    DB_PORT=3306
-    DB_DATABASE=database-name
-    DB_USERNAME=database-username
-    DB_PASSWORD=database-password
+- **Gerenciamento de Categorias:** Mantenha uma lista de categorias para classificar seus produtos de forma organizada.
 
-4. Execute os seguintes comandos para construir e iniciar os contêineres Docker:
-   ```bash
-    docker-compose build
-    docker-compose up -d
+- **Busca Avançada:** Realize buscas por nome ou descrição de produtos para encontrar facilmente o que precisa.
 
-5. Instale as dependências do Composer e execute as migrações do Laravel:
-   ```bash
-    docker-compose exec app composer install
-    docker-compose exec app php artisan key:generate
-    docker-compose exec app php artisan migrate
+- **Listagem Paginada:** Visualize seus produtos em uma lista paginada para facilitar a navegação.
 
-6. Acesse o aplicativo em http://localhost:8080 (ou na porta configurada no docker-compose.yml).
+- **Edição e Exclusão:** Faça edições e exclua produtos quando necessário.
+
+- **Feedback Visual:** Receba feedback visual na interface, como mensagens de sucesso e indicadores de carregamento, para uma experiência de usuário mais agradável.
+
+## Requisitos de Configuração
+
+Antes de iniciar o projeto, certifique-se de que possui as seguintes dependências instaladas:
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## Configurando o Ambiente de Desenvolvimento
+
+Para configurar o ambiente de desenvolvimento, siga as instruções detalhadas no arquivo [Configurando o Ambiente de Desenvolvimento com Docker](https://github.com/fellipemauriciosilva/challange-innyx/tree/main/api-innyx#readme).
+
+## Como Usar
+
+Após configurar o ambiente de desenvolvimento, você pode acessar a aplicação através do seu navegador em [http://localhost:8080](http://localhost:8080) (ou na porta configurada no arquivo `docker-compose.yml`).
+
+Siga as orientações na interface para criar, editar, listar e gerenciar seus produtos e categorias.
 
    
 
