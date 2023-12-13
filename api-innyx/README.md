@@ -1,6 +1,3 @@
-# challange-innyx
-challange-innyx
-
 ## Configurando o Ambiente de Desenvolvimento com Docker
 
 Para iniciar o projeto localmente, siga estas etapas:
