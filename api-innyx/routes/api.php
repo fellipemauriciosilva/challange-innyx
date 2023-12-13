@@ -22,22 +22,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:sanctum')->group(function () {
-    // Rotas autenticadas aqui
 
-    // Rotas para produtos
-    Route::get('/produtos', [ProdutoController::class, 'index']); // Listar todos os produtos
-    Route::get('/produtos/{id}', [ProdutoController::class, 'show']); // Mostrar detalhes de um produto específico
-    Route::post('/produtos', [ProdutoController::class, 'store']); // Criar um novo produto
-    Route::put('/produtos/{id}', [ProdutoController::class, 'update']); // Atualizar um produto
-    Route::delete('/produtos/{id}', [ProdutoController::class, 'destroy']); // Excluir um produto
-    Route::get('/produtos/buscar/{termo}', [ProdutoController::class, 'buscar']); // Buscar por nome ou descrição
+    Route::get('/produtos', [ProdutoController::class, 'index']);
+    Route::get('/produtos/{id}', [ProdutoController::class, 'show']);
+    Route::post('/produtos', [ProdutoController::class, 'store']);
+    Route::put('/produtos/{id}', [ProdutoController::class, 'update']);
+    Route::delete('/produtos/{id}', [ProdutoController::class, 'destroy']);
+    Route::get('/produtos/buscar/{termo}', [ProdutoController::class, 'buscar']);
 
-    // Rotas para categorias
-    Route::get('/categorias', [CategoriaController::class, 'index']); // Listar todas as categorias
-    Route::get('/categorias/{id}', [CategoriaController::class, 'show']); // Mostrar detalhes de uma categoria específica
-    Route::post('/categorias', [CategoriaController::class, 'store']); // Criar uma nova categoria
-    Route::put('/categorias/{id}', [CategoriaController::class, 'update']); // Atualizar uma categoria
-    Route::delete('/categorias/{id}', [CategoriaController::class, 'destroy']); // Excluir uma categoria
+    Route::get('/categorias', [CategoriaController::class, 'index']);
+    Route::get('/categorias/{id}', [CategoriaController::class, 'show']);
+    Route::post('/categorias', [CategoriaController::class, 'store']);
+    Route::put('/categorias/{id}', [CategoriaController::class, 'update']);
+    Route::delete('/categorias/{id}', [CategoriaController::class, 'destroy']);
 });
 
 Route::post('/login', [AuthController::class, 'login']);
