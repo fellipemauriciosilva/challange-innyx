@@ -1,11 +1,21 @@
 version: '3'
 services:
+    nginx:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
+            - .:/var/www/html
+        depends_on:
+            - app
+        networks:
+            - laravel-network
+
     app:
         build:
             context: .
             dockerfile: Dockerfile
-        ports:
-            - "8080:80"
         volumes:
             - .:/var/www/html
         depends_on:
@@ -20,7 +30,7 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: 12345678
             MYSQL_DATABASE: innyx
-            MYSQL_USER: root
+            MYSQL_USER: innyx
             MYSQL_PASSWORD: 12345678
         ports:
             - "3306:3306"
